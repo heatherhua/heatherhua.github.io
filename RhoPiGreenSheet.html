@@ -242,7 +242,7 @@ td {
     </tr>
   </table>
   
-  <button onclick="addServiceRow()"> + </button>
+  <button style="float:right;" onclick="addServiceRow()"> I did MOAR! </button>
 
   <script type="text/javascript">
     var rows = 6;
@@ -261,24 +261,37 @@ td {
 
       // Add some text to the new cells:
       cell1.innerHTML = rows;
-      cell2.innerHTML = "NEW CELL2";
+      var when = document.createElement("input");
+        when.setAttribute("type", "date");
+        when.setAttribute("name", "entry.479432008");
+        when.setAttribute("id", "entry_479432008");
+        when.setAttribute("aria-label", "Service #" +rows);
+        when.setAttribute("aria-required", "true");
+        when.setAttribute("class", "ss-q-date");
+        when.setAttribute("dir", "auto");
+
+      cell2.appendChild(when);
+
+      //cell2.innerHTML = document.createElement("input");
       cell3.innerHTML = "NEW CELL3";
       cell4.innerHTML = "NEW CELL4";
       cell5.innerHTML = "NEW CELL5";
     };
 </script>
 
-</br>
+</br></br></br>
 
 <div class="ss-form-question errorbox-good" role="listitem">
-<div dir="ltr" class="ss-item  ss-paragraph-text"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_1819058613"><div class="ss-q-title">Which service was your favorite? Share an experience! 
-</div>
-<div class="ss-q-help ss-secondary-text" dir="ltr">Make this as brief or long as you want! Make your voice count!</div></label>
-<textarea name="entry.1819058613" rows="8" cols="0" class="ss-q-long" id="entry_1819058613" dir="auto" aria-label="Which service was your favorite? Share an experience!  Make this as brief or long as you want! Make your voice count! "></textarea>
-<div class="error-message" id="1405729993_errorMessage"></div>
-<div class="required-message">This is a required question</div>
-</div></div></div> 
+  <div dir="ltr" class="ss-item  ss-paragraph-text">
+    <div class="ss-form-entry">
+      <label class="ss-q-item-label" for="entry_1819058613">
+        <div class="ss-q-title">Which service was your favorite? Share an experience! </div>
+        <div class="ss-q-help ss-secondary-text" dir="ltr">Make this as brief or long as you want! Make your voice count!</div>
+      </label>
+      <textarea name="entry.1819058613" rows="8" cols="0" class="ss-q-long" id="entry_1819058613" dir="auto" aria-label="Which service was your favorite? Share an experience!  Make this as brief or long as you want! Make your voice count! "></textarea>
+    </div>
+  </div>
+</div> 
 
 <div class="errorbox-good" role="listitem">
 <div dir="ltr" class="ss-item  ss-section-header"><div class="ss-form-entry">
