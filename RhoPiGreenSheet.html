@@ -1,10 +1,14 @@
 
 <link href='/static/forms/client/css/1404371006-formview_st_ltr.css' type='text/css' rel='stylesheet'>
+<link href="http://fonts.googleapis.com/css?family=Raleway:100" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="GreenSheetControl.js"> </script>
+
 <style type="text/css">
 
 .form-container{
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
   padding: 25px;
   background: white;
 }
@@ -28,10 +32,16 @@ body {
 
 .form-title {
   text-align: center;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  font-size: 50px;
+  line-height: 50px;
 }
 
 .form-desc {
   text-align: center;
+  font-family: 'Goudy Bookletter 1911', Georgia, Times, serif;
+  font-size: 15px;
+  line-height: 25px;
 }
 .ss-q-short {
   width: 100%;
@@ -41,8 +51,23 @@ body {
   width: 100%;
   vertical-align: center;
 }
+
+.ss-q-title {
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  line-height: 15px;
+}
 .ss-section-title {
   text-align: center;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.ss-secondary-text {
+  font-family: 'Goudy Bookletter 1911', Georgia, Times, serif;
+  font-size: 15px;
+  line-height: 25px;
 }
 
 .myButton {
@@ -64,9 +89,9 @@ body {
   display:inline-block;
   cursor:pointer;
   color:#ffffff;
-  font-family:arial;
-  font-size:15px;
-  font-weight:bold;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  font-size: 25px;
+  line-height: 15px;
   padding:6px 24px;
   text-decoration:none;
   text-shadow:0px 1px 0px #cc9f52;
@@ -86,9 +111,11 @@ body {
   top:1px;
 }
 
-
 td {
   text-align: center;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  font-size: 35px;
+  line-height: 20px;
 }
 
 </style>
@@ -101,7 +128,7 @@ td {
 <div class="form-container">
   <div class="top-of-page">
     <div class="form-heading">
-      <h1 class="form-title" dir="ltr">Rho Pi&#39;s Green Requirement Sheet!</h1>
+      <h1 class="form-title" dir="ltr">Rho Pi Green Sheet!</h1>
       <div class="form-desc" dir="ltr">
         Rho Pi is saving paper and saving time by eliminating the signature sheets! 
         <br>
@@ -189,11 +216,8 @@ td {
     <!-- rows get auto populated -->
   </table>
 
-  <script type="text/javascript" src="GreenSheetControl.js"> </script>
   <a href="#" class="myButton" onclick="addServiceRow()" style="float:right;">But I did more!</a>
-  <!-- <button style="float:right;" onclick="addServiceRow()"> I did MOAR! </button> -->
 </br></br></br>
-
 <div class="ss-form-question errorbox-good" role="listitem">
   <div dir="ltr" class="ss-item  ss-paragraph-text">
     <div class="ss-form-entry">
@@ -206,167 +230,75 @@ td {
   </div>
 </div> 
 
-<div class="errorbox-good" role="listitem">
-<div dir="ltr" class="ss-item  ss-section-header"><div class="ss-form-entry">
+<!-- FELLOWSHIPS -->
 <h2 class="ss-section-title">Fellowship Lovin&#39; !</h2>
-<div class="ss-section-description ss-no-ignore-whitespace"></div>
-</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
-<div dir="ltr" class="ss-item ss-item-required ss-date"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_740205503"><div class="ss-q-title">#1 When?
-<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
-<span class="ss-required-asterisk" aria-hidden="true">*</span></div>
-<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
-<input type="date" name="entry.740205503" value="" class="ss-q-date" dir="auto" id="entry_740205503" aria-label="#1 When?  " aria-required="true" required="">
-<div class="required-message">This is a required question</div></div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
-<div dir="ltr" class="ss-item ss-item-required ss-text"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_1948446790"><div class="ss-q-title">#1 Fellowship
-<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
-<span class="ss-required-asterisk" aria-hidden="true">*</span></div>
-<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
-<input type="text" name="entry.1948446790" value="" class="ss-q-short" id="entry_1948446790" dir="auto" aria-label="#1 Fellowship  " aria-required="true" required="" title="">
-<div class="error-message" id="1774987813_errorMessage"></div>
-<div class="required-message">This is a required question</div>
-</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
-<div dir="ltr" class="ss-item ss-item-required ss-text"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_166257851"><div class="ss-q-title">#1 Credit?
-<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
-<span class="ss-required-asterisk" aria-hidden="true">*</span></div>
-<div class="ss-q-help ss-secondary-text" dir="ltr">e.g &quot;0.5&quot; for Spontaneous Fellowships, &quot;1&quot; standard! </div></label>
-<input type="text" name="entry.166257851" value="" class="ss-q-short" id="entry_166257851" dir="auto" aria-label="#1 Credit? e.g &quot;0.5&quot; for Spontaneous Fellowships, &quot;1&quot; standard!  " aria-required="true" required="" title="">
-<div class="error-message" id="1537991228_errorMessage"></div>
-<div class="required-message">This is a required question</div>
-</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
-<div dir="ltr" class="ss-item ss-item-required ss-text"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_920951067"><div class="ss-q-title">#1 Who Chaired?
-<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
-<span class="ss-required-asterisk" aria-hidden="true">*</span></div>
-<div class="ss-q-help ss-secondary-text" dir="ltr">If you chaired, write &quot;Membership&quot;</div></label>
-<input type="text" name="entry.920951067" value="" class="ss-q-short" id="entry_920951067" dir="auto" aria-label="#1 Who Chaired? If you chaired, write &quot;Membership&quot; " aria-required="true" required="" title="">
-<div class="error-message" id="1213133562_errorMessage"></div>
-<div class="required-message">This is a required question</div>
-</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
-<div dir="ltr" class="ss-item ss-item-required ss-date"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_1031536098"><div class="ss-q-title">#2 When?
-<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
-<span class="ss-required-asterisk" aria-hidden="true">*</span></div>
-<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
-<input type="date" name="entry.1031536098" value="" class="ss-q-date" dir="auto" id="entry_1031536098" aria-label="#2 When?  " aria-required="true" required="">
-<div class="required-message">This is a required question</div></div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
-<div dir="ltr" class="ss-item ss-item-required ss-text"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_650628908"><div class="ss-q-title">#2 Fellowship
-<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
-<span class="ss-required-asterisk" aria-hidden="true">*</span></div>
-<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
-<input type="text" name="entry.650628908" value="" class="ss-q-short" id="entry_650628908" dir="auto" aria-label="#2 Fellowship  " aria-required="true" required="" title="">
-<div class="error-message" id="1528305921_errorMessage"></div>
-<div class="required-message">This is a required question</div>
-</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
-<div dir="ltr" class="ss-item ss-item-required ss-text"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_818284749"><div class="ss-q-title">#2 Credit?
-<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
-<span class="ss-required-asterisk" aria-hidden="true">*</span></div>
-<div class="ss-q-help ss-secondary-text" dir="ltr">e.g &quot;0.5&quot; for Spontaneous Fellowships, &quot;1&quot; standard! </div></label>
-<input type="text" name="entry.818284749" value="" class="ss-q-short" id="entry_818284749" dir="auto" aria-label="#2 Credit? e.g &quot;0.5&quot; for Spontaneous Fellowships, &quot;1&quot; standard!  " aria-required="true" required="" title="">
-<div class="error-message" id="1748923574_errorMessage"></div>
-<div class="required-message">This is a required question</div>
-</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
-<div dir="ltr" class="ss-item ss-item-required ss-text"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_1367057959"><div class="ss-q-title">#2 Who Chaired?
-<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
-<span class="ss-required-asterisk" aria-hidden="true">*</span></div>
-<div class="ss-q-help ss-secondary-text" dir="ltr">If you chaired, write &quot;Membership&quot;</div></label>
-<input type="text" name="entry.1367057959" value="" class="ss-q-short" id="entry_1367057959" dir="auto" aria-label="#2 Who Chaired? If you chaired, write &quot;Membership&quot; " aria-required="true" required="" title="">
-<div class="error-message" id="445988969_errorMessage"></div>
-<div class="required-message">This is a required question</div>
-</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
-<div dir="ltr" class="ss-item  ss-date"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_799613111"><div class="ss-q-title">#3 When?
-</div>
-<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
-<input type="date" name="entry.799613111" value="" class="ss-q-date" dir="auto" id="entry_799613111" aria-label="#3 When?  ">
-<div class="required-message">This is a required question</div></div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
-<div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_1417326141"><div class="ss-q-title">#3 Fellowship
-</div>
-<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
-<input type="text" name="entry.1417326141" value="" class="ss-q-short" id="entry_1417326141" dir="auto" aria-label="#3 Fellowship  " title="">
-<div class="error-message" id="702831315_errorMessage"></div>
-<div class="required-message">This is a required question</div>
-</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
-<div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_468795101"><div class="ss-q-title">#3 Credit?
-</div>
-<div class="ss-q-help ss-secondary-text" dir="ltr">e.g &quot;0.5&quot; for Spontaneous Fellowships, &quot;1&quot; standard! </div></label>
-<input type="text" name="entry.468795101" value="" class="ss-q-short" id="entry_468795101" dir="auto" aria-label="#3 Credit? e.g &quot;0.5&quot; for Spontaneous Fellowships, &quot;1&quot; standard!  " title="">
-<div class="error-message" id="2115538520_errorMessage"></div>
-<div class="required-message">This is a required question</div>
-</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
-<div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_1536786182"><div class="ss-q-title">#3 Who Chaired?
-</div>
-<div class="ss-q-help ss-secondary-text" dir="ltr">If you chaired, write &quot;Membership&quot;</div></label>
-<input type="text" name="entry.1536786182" value="" class="ss-q-short" id="entry_1536786182" dir="auto" aria-label="#3 Who Chaired? If you chaired, write &quot;Membership&quot; " title="">
-<div class="error-message" id="1026840986_errorMessage"></div>
-<div class="required-message">This is a required question</div>
-</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
-<div dir="ltr" class="ss-item  ss-date"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_2076062436"><div class="ss-q-title">#4 When?
-</div>
-<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
-<input type="date" name="entry.2076062436" value="" class="ss-q-date" dir="auto" id="entry_2076062436" aria-label="#4 When?  ">
-<div class="required-message">This is a required question</div></div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
-<div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_1158701983"><div class="ss-q-title">#4 Fellowship
-</div>
-<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
-<input type="text" name="entry.1158701983" value="" class="ss-q-short" id="entry_1158701983" dir="auto" aria-label="#4 Fellowship  " title="">
-<div class="error-message" id="1587035873_errorMessage"></div>
-<div class="required-message">This is a required question</div>
-</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
-<div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_852613299"><div class="ss-q-title">#4 Credit?
-</div>
-<div class="ss-q-help ss-secondary-text" dir="ltr">e.g &quot;0.5&quot; for Spontaneous Fellowships, &quot;1&quot; standard! </div></label>
-<input type="text" name="entry.852613299" value="" class="ss-q-short" id="entry_852613299" dir="auto" aria-label="#4 Credit? e.g &quot;0.5&quot; for Spontaneous Fellowships, &quot;1&quot; standard!  " title="">
-<div class="error-message" id="546469857_errorMessage"></div>
-<div class="required-message">This is a required question</div>
-</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
-<div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_1026208556"><div class="ss-q-title">#4 Who Chaired?
-</div>
-<div class="ss-q-help ss-secondary-text" dir="ltr">If you chaired, write &quot;Membership&quot;</div></label>
-<input type="text" name="entry.1026208556" value="" class="ss-q-short" id="entry_1026208556" dir="auto" aria-label="#4 Who Chaired? If you chaired, write &quot;Membership&quot; " title="">
-<div class="error-message" id="230630729_errorMessage"></div>
-<div class="required-message">This is a required question</div>
-</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
-<div dir="ltr" class="ss-item  ss-paragraph-text"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_2003607329"><div class="ss-q-title">More??
-</div>
-<div class="ss-q-help ss-secondary-text" dir="ltr">Write down the all the other Fellowships you attended! (With all the information above)</div></label>
-<textarea name="entry.2003607329" rows="8" cols="0" class="ss-q-long" id="entry_2003607329" dir="auto" aria-label="More?? Write down the all the other Fellowships you attended! (With all the information above) "></textarea>
-<div class="error-message" id="1120749557_errorMessage"></div>
-<div class="required-message">This is a required question</div>
-</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
-<div dir="ltr" class="ss-item  ss-paragraph-text"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_1559108434"><div class="ss-q-title">Which fellowship was your favorite? 
-</div>
-<div class="ss-q-help ss-secondary-text" dir="ltr">Feedback is always welcome!</div></label>
-<textarea name="entry.1559108434" rows="8" cols="0" class="ss-q-long" id="entry_1559108434" dir="auto" aria-label="Which fellowship was your favorite?  Feedback is always welcome! "></textarea>
-<div class="error-message" id="988205894_errorMessage"></div>
-<div class="required-message">This is a required question</div>
-</div></div></div> <div class="errorbox-good" role="listitem">
-<div dir="ltr" class="ss-item  ss-section-header"><div class="ss-form-entry">
+
+  <!-- FELLOWSHIP TABLE -->
+  <table id="fellowship_table" style="width:100%">
+    <tr>
+      <th> </th>
+      <th> 
+        <div class="ss-q-title"> Date
+            <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+            <span class="ss-required-asterisk" aria-hidden="true">*</span>
+          </div>
+      </th>
+      <th> 
+        <div class="ss-q-title"> Fellowship Event
+          <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+          <span class="ss-required-asterisk" aria-hidden="true">*</span>
+        </div>
+        <div class="ss-q-help ss-secondary-text" dir="ltr"></div>
+      </th>
+      <th> 
+        <div class="ss-q-title"> Credits
+            <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+            <span class="ss-required-asterisk" aria-hidden="true">*</span>
+          </div> 
+        </th>
+      <th> 
+        <div class="ss-q-title"> Chair
+            <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+            <span class="ss-required-asterisk" aria-hidden="true">*</span>
+          </div>
+      </th>
+    </tr>
+    <!-- rows get auto populated -->
+  </table>
+
+  <a href="#" class="myButton" onclick="addFellowshipRow()" style="float:right;">But I did more!</a>
+</br></br></br>
+
+
+<div class="ss-form-question errorbox-good" role="listitem">
+  <div dir="ltr" class="ss-item  ss-paragraph-text">
+    <div class="ss-form-entry">
+      <label class="ss-q-item-label" for="entry_1559108434">
+        <div class="ss-q-title">Which fellowship was your favorite? </div>
+        <div class="ss-q-help ss-secondary-text" dir="ltr">Feedback is always welcome!</div>
+      </label>
+      <textarea name="entry.1559108434" rows="8" cols="0" class="ss-q-long" id="entry_1559108434" dir="auto" aria-label="Which fellowship was your favorite?  Feedback is always welcome! "></textarea>
+    </div>
+  </div>
+</div> 
+
 <h2 class="ss-section-title">Quarterly Fraternity Events!</h2>
-<div class="ss-section-description ss-no-ignore-whitespace"></div>
-</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
-<div dir="ltr" class="ss-item  ss-paragraph-text"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_953406965"><div class="ss-q-title">Rush events!! 
-</div>
-<div class="ss-q-help ss-secondary-text" dir="ltr">Event Name (mm/dd/yy)</div></label>
-<textarea name="entry.953406965" rows="8" cols="0" class="ss-q-long" id="entry_953406965" dir="auto" aria-label="Rush events!!  Event Name (mm/dd/yy) "></textarea>
-<div class="error-message" id="546293682_errorMessage"></div>
-<div class="required-message">This is a required question</div>
-</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+
+<div class="ss-form-question errorbox-good" role="listitem">
+  <div dir="ltr" class="ss-item  ss-paragraph-text">
+    <div class="ss-form-entry">
+      <label class="ss-q-item-label" for="entry_953406965">
+        <div class="ss-q-title">Rush events!! </div>
+        <div class="ss-q-help ss-secondary-text" dir="ltr">Event Name (mm/dd/yy)</div>
+      </label>
+      <textarea name="entry.953406965" rows="8" cols="0" class="ss-q-long" id="entry_953406965" dir="auto" aria-label="Rush events!!  Event Name (mm/dd/yy) "></textarea>
+      <div class="error-message" id="546293682_errorMessage"></div>
+      <div class="required-message">This is a required question</div>
+    </div>
+  </div>
+</div> 
+
+<div class="ss-form-question errorbox-good" role="listitem">
 <div dir="ltr" class="ss-item ss-item-required ss-date"><div class="ss-form-entry">
 <label class="ss-q-item-label" for="entry_1997032944"><div class="ss-q-title">Family Event?
 <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
