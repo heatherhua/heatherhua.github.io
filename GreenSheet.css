@@ -1,0 +1,118 @@
+.form-container{
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 25px;
+  background: white;
+}
+
+.error-message, .required-message, .ss-required-asterisk {
+  font-family: "Roboto";
+  color: rgb(196,59,29);
+  font-weight: 400;
+  font-size: 1.000rem;
+  font-style: normal;
+}
+
+body {
+  background-color: #00003D;
+  font-family: "Roboto";
+  color: rgb(119,119,119);
+  font-weight: 400;
+  font-size: 1.080rem;
+  font-style: normal;
+}
+
+.form-title {
+  text-align: center;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  font-size: 50px;
+  line-height: 50px;
+}
+
+.form-desc {
+  text-align: center;
+  font-family: 'Goudy Bookletter 1911', Georgia, Times, serif;
+  font-size: 15px;
+  line-height: 25px;
+}
+.ss-q-short {
+  width: 100%;
+}
+.ss-q-long {
+  margin-top: 5px;
+  width: 100%;
+  vertical-align: center;
+}
+
+.ss-q-title {
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  line-height: 15px;
+}
+.ss-section-title {
+  text-align: center;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  font-size: 25px;
+  line-height: 30px;
+}
+.ss-section-description {
+  font-family: 'Goudy Bookletter 1911', Georgia, Times, serif;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  color: rgb(196,59,29);
+}
+
+.ss-secondary-text {
+  font-family: 'Goudy Bookletter 1911', Georgia, Times, serif;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.myButton {
+  -moz-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+  box-shadow:inset 0px 1px 0px 0px #fce2c1;
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffc477), color-stop(1, #fb9e25));
+  background:-moz-linear-gradient(top, #ffc477 5%, #fb9e25 100%);
+  background:-webkit-linear-gradient(top, #ffc477 5%, #fb9e25 100%);
+  background:-o-linear-gradient(top, #ffc477 5%, #fb9e25 100%);
+  background:-ms-linear-gradient(top, #ffc477 5%, #fb9e25 100%);
+  background:linear-gradient(to bottom, #ffc477 5%, #fb9e25 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffc477', endColorstr='#fb9e25',GradientType=0);
+  background-color:#ffc477;
+  -moz-border-radius:6px;
+  -webkit-border-radius:6px;
+  border-radius:6px;
+  border:1px solid #eeb44f;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  font-size: 25px;
+  line-height: 15px;
+  padding:6px 24px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #cc9f52;
+}
+.myButton:hover {
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #ffc477));
+  background:-moz-linear-gradient(top, #fb9e25 5%, #ffc477 100%);
+  background:-webkit-linear-gradient(top, #fb9e25 5%, #ffc477 100%);
+  background:-o-linear-gradient(top, #fb9e25 5%, #ffc477 100%);
+  background:-ms-linear-gradient(top, #fb9e25 5%, #ffc477 100%);
+  background:linear-gradient(to bottom, #fb9e25 5%, #ffc477 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb9e25', endColorstr='#ffc477',GradientType=0);
+  background-color:#fb9e25;
+}
+.myButton:active {
+  position:relative;
+  top:1px;
+}
+
+td {
+  text-align: center;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  font-size: 35px;
+  line-height: 20px;
+}
