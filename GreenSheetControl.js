@@ -1,5 +1,6 @@
     var serviceRows = 0;
     var fellowshipRows = 0;
+    var rushRows = 0;
     var serviceHash = {
     	2 : {
     		"name" : "entry.479432008",
@@ -44,6 +45,19 @@
         "id" : "entry_920951067",
         "title" : "Fellowship Chairs" 
       }  
+    }
+
+    var rushHash = {
+      2 : {
+        "name" : "entry.953406965",
+        "id" : "entry_953406965" ,
+        "title" : "Rush Dates"
+      },
+      3 : {
+        "name" : "entry.1495623405",
+        "id" : "entry_1495623405" ,
+        "title" : "Rush Events"
+      },
     }
     // When rows > 5 we will convert the data to strings and send to paragraph for extra services.
 
@@ -110,12 +124,48 @@
       	data.setAttribute("type", "text");
         data.setAttribute("name", hash[cell].name);
         data.setAttribute("id", hash[cell].id);
-        data.setAttribute("aria-label", serviceHash[cell].title);
+        data.setAttribute("aria-label", hash[cell].title);
         data.setAttribute("aria-required", "true");
         data.setAttribute("class", "ss-q-short");
         data.setAttribute("dir", "auto");
       	text_cells[j].appendChild(data);
       }
+    };
+
+    function addRushRow() {
+      var table = document.getElementById("rush_table");
+      
+      var row = table.insertRow(++rushRows);
+
+      // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+      var cell1 = row.insertCell(0);
+      var cell2 = row.insertCell(1);
+      var cell3 = row.insertCell(2);
+
+      cell1.innerHTML = rushRows;
+
+      // Date
+      var when = document.createElement("input");
+        when.setAttribute("type", "date");
+        // Replace name and entry with array of ids
+        when.setAttribute("name", rushHash[2].name);
+        when.setAttribute("id", rushHash[2].id);
+        when.setAttribute("aria-label", rushHash[2].title);
+        when.setAttribute("aria-required", "true");
+        when.setAttribute("class", "ss-q-date");
+        when.setAttribute("dir", "auto");
+
+      cell2.appendChild(when);
+
+      var data = document.createElement("input");
+        data.setAttribute("type", "text");
+        data.setAttribute("name", rushHash[3].name);
+        data.setAttribute("id", rushHash[3].id);
+        data.setAttribute("aria-label", rushHash[3].title);
+        data.setAttribute("aria-required", "true");
+        data.setAttribute("class", "ss-q-short");
+        data.setAttribute("dir", "auto");
+        cell3.appendChild(data);
     };
 
     function loadServiceTable() {
@@ -130,6 +180,12 @@
       }
     }
 
+    function loadRushTable() {
+      for (i = 0; i < 2; i++) {
+        addRushRow();
+      }
+    }
+
     function addFellowshipRow() {
         addRow("fellowship_table");
     }
@@ -140,4 +196,5 @@
     window.onload = function() {
       loadServiceTable();
       loadFellowshipTable();
+      loadRushTable();
     }
