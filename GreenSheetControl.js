@@ -1,6 +1,9 @@
     var serviceRows = 0;
     var fellowshipRows = 0;
     var rushRows = 0;
+    var famEventRows = 0;
+    var icEventRows = 0;
+
     var serviceHash = {
     	2 : {
     		"name" : "entry.479432008",
@@ -22,7 +25,7 @@
     		"id" : "entry_1538896044",
         "title" : "Service Chairs" 
     	}    	
-    }
+    };
 
     var fellowshipHash = {
       2 : {
@@ -58,8 +61,50 @@
         "id" : "entry_1495623405" ,
         "title" : "Rush Events"
       },
+
+      4 : {
+        "name" : "entry.1705649689",
+        "id" : "entry_1705649689",
+        "title" : "Rush Chairs" 
+      }
+
     }
-    // When rows > 5 we will convert the data to strings and send to paragraph for extra services.
+
+    var famEventHash = {
+      2 : {
+        "name" : "entry.1997032944",
+        "id" : "entry_1997032944" ,
+        "title" : "Family Event Dates"
+      },
+      3 : {
+        "name" : "entry.564506775",
+        "id" : "entry_564506775" ,
+        "title" : "Family Events"
+      },
+      4 : {
+        "name" : "entry.259764357",
+        "id" : "entry_259764357",
+        "title" : "Family Event Chairs" 
+      }
+    }
+
+    var icEventHash = {
+      2 : {
+        "name" : "entry.1245868786",
+        "id" : "entry_1245868786" ,
+        "title" : "IC Event Dates"
+      },
+      3 : {
+        "name" : "entry.388159601",
+        "id" : "entry_388159601" ,
+        "title" : "IC Events"
+      },
+      4 : {
+        "name" : "entry.370256626",
+        "id" : "entry_2370256626",
+        "title" : "IC Event Chairs" 
+      }
+    }
 
     function addRow(tableName) {
       // Find a <table> element with id="myTable":
@@ -80,9 +125,6 @@
           hash = serviceHash;     
       }
 
-      // Create an empty <tr> element and add it to the 1st position of the table:
-      // var row = table.insertRow(++rows);
-
       // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
       var cell1 = row.insertCell(0);
       var cell2 = row.insertCell(1);
@@ -100,8 +142,6 @@
         default:
           cell1.innerHTML = 0;
       }
-      // Number
-      // cell1.innerHTML = rows;
 
       // Date
       var when = document.createElement("input");
@@ -132,40 +172,79 @@
       }
     };
 
-    function addRushRow() {
-      var table = document.getElementById("rush_table");
+
+    // For rush, family events, ic events ()
+    function addRowSmall(tableName) {
+      var table = document.getElementById(tableName);
       
-      var row = table.insertRow(++rushRows);
+      var hash;
+      var row;
+      switch(tableName) {
+        case "rush_table":
+          hash = rushHash;
+          row = table.insertRow(++rushRows);
+          break;
+        case "fam_event_table":
+          hash = famEventHash;
+          row = table.insertRow(++famEventRows);
+          break;
+        case "ic_table":
+          hash = icEventHash;
+          row = table.insertRow(++icEventRows);
+          break;
+        default:
+        //shouldn't happen
+          hash = icEventHash;     
+      }
 
       // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
       var cell1 = row.insertCell(0);
       var cell2 = row.insertCell(1);
       var cell3 = row.insertCell(2);
+      var cell4 = row.insertCell(3);
 
-      cell1.innerHTML = rushRows;
+      switch(tableName){
+        case "rush_table":
+          cell1.innerHTML = rushRows;
+          break;
+        case "fam_event_table":
+          cell1.innerHTML = famEventRows;
+          break;
+        case "ic_table" :
+          cell1.innerHTML = icEventRows;
+          break;
+        default:
+          cell1.innerHTML = 0;
+      }
 
       // Date
       var when = document.createElement("input");
         when.setAttribute("type", "date");
         // Replace name and entry with array of ids
-        when.setAttribute("name", rushHash[2].name);
-        when.setAttribute("id", rushHash[2].id);
-        when.setAttribute("aria-label", rushHash[2].title);
+        when.setAttribute("name", hash[2].name);
+        when.setAttribute("id", hash[2].id);
+        when.setAttribute("aria-label", hash[2].title);
         when.setAttribute("aria-required", "true");
         when.setAttribute("class", "ss-q-date");
         when.setAttribute("dir", "auto");
 
       cell2.appendChild(when);
 
-      var data = document.createElement("input");
+      var text_cells = [cell3, cell4];
+
+      for (j = 0; j < text_cells.length; j++) {
+        var cell = j + 3;
+        var data = document.createElement("input");
         data.setAttribute("type", "text");
-        data.setAttribute("name", rushHash[3].name);
-        data.setAttribute("id", rushHash[3].id);
-        data.setAttribute("aria-label", rushHash[3].title);
+        data.setAttribute("name", hash[cell].name);
+        data.setAttribute("id", hash[cell].id);
+        data.setAttribute("aria-label", hash[cell].title);
         data.setAttribute("aria-required", "true");
         data.setAttribute("class", "ss-q-short");
         data.setAttribute("dir", "auto");
-        cell3.appendChild(data);
+        text_cells[j].appendChild(data);
+      }
+
     };
 
     function loadServiceTable() {
@@ -186,6 +265,18 @@
       }
     }
 
+    function loadFamilyEventTable() {
+      for(i = 0; i < 2; i++) {
+        addFamEventRow();
+      }
+    }
+
+    function loadIcEventTable() {
+      for( i = 0; i < 2; i++) {
+        addIcEventRow();
+      }
+    }
+
     function addFellowshipRow() {
         addRow("fellowship_table");
     }
@@ -193,8 +284,23 @@
     function addServiceRow() {
         addRow("service_table");
     }
+
+    function addRushRow() {
+      addRowSmall("rush_table");
+    }
+
+    function addFamEventRow() {
+      addRowSmall("fam_event_table");
+    }
+
+    function addIcEventRow() {
+      addRowSmall("ic_table");
+    }
+
     window.onload = function() {
       loadServiceTable();
       loadFellowshipTable();
       loadRushTable();
+      loadFamilyEventTable();
+      loadIcEventTable();
     }

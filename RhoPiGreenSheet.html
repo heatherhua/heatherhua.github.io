@@ -2,8 +2,6 @@
 <link href='/static/forms/client/css/1404371006-formview_st_ltr.css' type='text/css' rel='stylesheet'>
 <link href="http://fonts.googleapis.com/css?family=Raleway:100" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="GreenSheetControl.js"> </script>
-
 <style type="text/css">
 
 .form-container{
@@ -62,6 +60,13 @@ body {
   font-family: 'Raleway', Helvetica, Arial, sans-serif;
   font-size: 25px;
   line-height: 30px;
+}
+.ss-section-description {
+  font-family: 'Goudy Bookletter 1911', Georgia, Times, serif;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  color: rgb(196,59,29);
 }
 
 .ss-secondary-text {
@@ -122,6 +127,9 @@ td {
 
 
 <link href='/static/forms/client/css/3145455273-mobile_formview_st_ltr.css' type='text/css' rel='stylesheet' media='screen and (max-device-width: 721px)'>
+<head>
+  <script type="text/javascript" src="GreenSheetControl.js"> </script>
+</head>
 
 <!-- START FORM -->
 <body>
@@ -216,7 +224,7 @@ td {
     <!-- rows get auto populated -->
   </table>
 
-  <a href="#" class="myButton" onclick="addServiceRow()" style="float:right;">But I did more!</a>
+  <a href="#" class="myButton" onclick="addServiceRow();" style="float:right;">I did more!</a>
 </br></br></br>
 
 <div class="ss-form-question errorbox-good" role="listitem">
@@ -266,7 +274,7 @@ td {
     <!-- rows get auto populated -->
   </table>
 
-  <a href="#" class="myButton" onclick="addFellowshipRow()" style="float:right;">But I did more!</a>
+  <a href="#" class="myButton" onclick="addFellowshipRow();" style="float:right;">I did more!</a>
 </br></br></br>
 
 <div class="ss-form-question errorbox-good" role="listitem">
@@ -281,8 +289,9 @@ td {
   </div>
 </div> 
 
+<!-- QUARTERLY -->
 <h2 class="ss-section-title">Quarterly Fraternity Events!</h2>
-  <table id="rush_table" style="width:70%">
+  <table id="rush_table" style="width:80%">
     <tr>
       <th> </th>
       <th> 
@@ -297,163 +306,340 @@ td {
           <span class="ss-required-asterisk" aria-hidden="true">*</span>
         </div>
       </th>
+      <th> 
+        <div class="ss-q-title"> Rush Event Chairs
+          <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+          <span class="ss-required-asterisk" aria-hidden="true">*</span>
+        </div>
+      </th>
     </tr>
   </table>
-  <a href="#" class="myButton" onclick="addRushRow()" style="float:right;">But I did more!</a>
-
+  <a href="#" class="myButton" onclick="addRushRow()" style="float:right;">I did more!</a>
 </br></br>
 
+  <table id="fam_event_table" style="width:80%">
+    <tr>
+      <th> </th>
+      <th> 
+        <div class="ss-q-title"> Date
+            <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+            <span class="ss-required-asterisk" aria-hidden="true">*</span>
+          </div>
+      </th>
+      <th> 
+        <div class="ss-q-title"> Family Events
+          <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+          <span class="ss-required-asterisk" aria-hidden="true">*</span>
+        </div>
+      </th>
+      <th> 
+        <div class="ss-q-title"> Family Event Chairs
+          <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+          <span class="ss-required-asterisk" aria-hidden="true">*</span>
+        </div>
+      </th>
+    </tr>
+  </table>
+  <a href="#" class="myButton" onclick="addFamEventRow()" style="float:right;">I did more!</a>
+</br></br>
+
+<table id="ic_table" style="width:80%">
+    <tr>
+      <th> </th>
+      <th> 
+        <div class="ss-q-title"> Date
+            <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+            <span class="ss-required-asterisk" aria-hidden="true">*</span>
+          </div>
+      </th>
+      <th> 
+        <div class="ss-q-title"> IC Events
+          <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+          <span class="ss-required-asterisk" aria-hidden="true">*</span>
+        </div>
+      </th>
+      <th> 
+        <div class="ss-q-title"> IC Event Chairs
+          <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+          <span class="ss-required-asterisk" aria-hidden="true">*</span>
+        </div>
+      </th>
+    </tr>
+  </table>
+  <a href="#" class="myButton" onclick="addIcEventRow()" style="float:right;">I did more!</a>
+</br></br></br></br>
+
+<div class="ss-form-question errorbox-good" role="listitem" style="width: 50%; float: left;">
+  <div dir="ltr" class="ss-item ss-item-required ss-radio">
+    <div class="ss-form-entry">
+      <label class="ss-q-item-label" for="entry_1578888613">
+        <div class="ss-q-title">Attended Activation?
+          <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+          <span class="ss-required-asterisk" aria-hidden="true">*</span>
+        </div>
+        <div class="ss-q-help ss-secondary-text" dir="ltr"></div>
+      </label>
+
+      <ul class="ss-choices" role="radiogroup" aria-label="Attended Activation?  ">
+        <li class="ss-choice-item">
+          <label>
+            <span class="ss-choice-item-control goog-inline-block">
+              <input type="radio" name="entry.1352429932" value="YES" id="group_1352429932_1" role="radio" class="ss-q-radio" aria-label="YES" required="" aria-required="true">
+            </span>
+            <span class="ss-choice-label">YES</span>
+          </label>
+        </li> 
+        <li class="ss-choice-item">
+          <label>
+            <span class="ss-choice-item-control goog-inline-block">
+              <input type="radio" name="entry.1352429932" value="NO" id="group_1352429932_2" role="radio" class="ss-q-radio" aria-label="NO" required="" aria-required="true">
+            </span>
+            <span class="ss-choice-label">NO</span>
+          </label>
+        </li>
+      </ul>
+      <div class="error-message" id="1578888613_errorMessage"></div>
+    </div>
+  </div>
+</div>
+
+<div class="ss-form-question errorbox-good" role="listitem" style="width: 50%; float: left;">
+  <div dir="ltr" class="ss-item ss-item-required ss-radio">
+    <div class="ss-form-entry">
+      <label class="ss-q-item-label" for="entry_912212753">
+        <div class="ss-q-title">Active Dues!
+          <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+          <span class="ss-required-asterisk" aria-hidden="true">*</span>
+        </div>
+
+        <ul class="ss-choices" role="radiogroup" aria-label="Active Dues!  "><li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1941248308" value="PAID" id="group_1941248308_1" role="radio" class="ss-q-radio" aria-label="PAID" required="" aria-required="true"></span>
+        <span class="ss-choice-label">PAID</span>
+        </label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1941248308" value="Did not pay" id="group_1941248308_2" role="radio" class="ss-q-radio" aria-label="Did not pay" required="" aria-required="true"></span>
+        <span class="ss-choice-label">Did not pay</span>
+        </label>
+        </li>
+        </ul>
+        <div class="error-message" id="912212753_errorMessage"></div>
+        </div>
+      </div>
+    </div> 
+</div>
+</br></br></br>
+
+<div class="ss-form-question errorbox-good" role="listitem" style="width: 50%; float: left;">
+  <div dir="ltr" class="ss-item ss-item-required ss-radio">
+    <div class="ss-form-entry">
+      <label class="ss-q-item-label" for="entry_325981811">
+        <div class="ss-q-title">Committee?
+          <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+          <span class="ss-required-asterisk" aria-hidden="true">*</span>
+        </div>
+        <div class="ss-q-help ss-secondary-text" dir="ltr">(Dance Comp is under IC)</div>
+      </label>
+
+    <ul class="ss-choices" role="radiogroup" aria-label="Committee? (Dance Comp is under IC) ">
+      <li class="ss-choice-item">
+        <label>
+          <span class="ss-choice-item-control goog-inline-block">
+            <input type="radio" name="entry.1690506264" value="PT" id="group_1690506264_1" role="radio" class="ss-q-radio" aria-label="PT" required="" aria-required="true">
+          </span>
+          <span class="ss-choice-label">PT</span>
+        </label>
+      </li> 
+      <li class="ss-choice-item">
+        <label>
+          <span class="ss-choice-item-control goog-inline-block">
+            <input type="radio" name="entry.1690506264" value="Membership" id="group_1690506264_2" role="radio" class="ss-q-radio" aria-label="Membership" required="" aria-required="true">
+          </span>
+          <span class="ss-choice-label">Membership</span>
+        </label>
+      </li> 
+      <li class="ss-choice-item">
+        <label>
+          <span class="ss-choice-item-control goog-inline-block">
+            <input type="radio" name="entry.1690506264" value="IC" id="group_1690506264_3" role="radio" class="ss-q-radio" aria-label="IC" required="" aria-required="true">
+          </span>
+          <span class="ss-choice-label">IC</span>
+        </label>
+      </li> 
+      <li class="ss-choice-item">
+        <label>
+          <span class="ss-choice-item-control goog-inline-block">
+            <input type="radio" name="entry.1690506264" value="S@A" id="group_1690506264_4" role="radio" class="ss-q-radio" aria-label="S@A" required="" aria-required="true">
+          </span>
+          <span class="ss-choice-label">S@A</span>
+          </label>
+        </li> 
+        <li class="ss-choice-item">
+          <label>
+            <span class="ss-choice-item-control goog-inline-block">
+              <input type="radio" name="entry.1690506264" value="WebMaster" id="group_1690506264_5" role="radio" class="ss-q-radio" aria-label="WebMaster" required="" aria-required="true">
+            </span>
+            <span class="ss-choice-label">WebMaster</span>
+          </label>
+        </li> 
+        <li class="ss-choice-item">
+          <label>
+            <span class="ss-choice-item-control goog-inline-block">
+              <input type="radio" name="entry.1690506264" value="Historian" id="group_1690506264_6" role="radio" class="ss-q-radio" aria-label="Historian" required="" aria-required="true">
+            </span>
+            <span class="ss-choice-label">Historian</span>
+            </label>
+          </li> 
+          <li class="ss-choice-item">
+            <label>
+              <span class="ss-choice-item-control goog-inline-block">
+                <input type="radio" name="entry.1690506264" value="Finance" id="group_1690506264_7" role="radio" class="ss-q-radio" aria-label="Finance" required="" aria-required="true">
+              </span>
+              <span class="ss-choice-label">Finance</span>
+            </label>
+          </li> 
+          <li class="ss-choice-item">
+            <label>
+              <span class="ss-choice-item-control goog-inline-block">
+                <input type="radio" name="entry.1690506264" value="Service" id="group_1690506264_8" role="radio" class="ss-q-radio" aria-label="Service" required="" aria-required="true">
+              </span>
+              <span class="ss-choice-label">Service</span>
+            </label>
+          </li> 
+          <li class="ss-choice-item">
+            <label>
+              <span class="ss-choice-item-control goog-inline-block">
+                <input type="radio" name="entry.1690506264" value="Fellowship" id="group_1690506264_9" role="radio" class="ss-q-radio" aria-label="Fellowship" required="" aria-required="true">
+              </span>
+              <span class="ss-choice-label">Fellowship</span>
+            </label>
+          </li> 
+          <li class="ss-choice-item">
+            <label>
+              <span class="ss-choice-item-control goog-inline-block">
+                <input type="radio" name="entry.1690506264" value="AlumniSec" id="group_1690506264_10" role="radio" class="ss-q-radio" aria-label="AlumniSec" required="" aria-required="true">
+              </span>
+              <span class="ss-choice-label">AlumniSec</span>
+            </label>
+          </li> 
+          <li class="ss-choice-item">
+            <label>
+              <span class="ss-choice-item-control goog-inline-block">
+                <input type="radio" name="entry.1690506264" value="AdminSec" id="group_1690506264_11" role="radio" class="ss-q-radio" aria-label="AdminSec" required="" aria-required="true">
+              </span>
+              <span class="ss-choice-label">AdminSec</span>
+            </label>
+          </li> 
+          <li class="ss-choice-item">
+            <label>
+              <span class="ss-choice-item-control goog-inline-block">
+                <input type="radio" name="entry.1690506264" value="Publicity" id="group_1690506264_12" role="radio" class="ss-q-radio" aria-label="Publicity" required="" aria-required="true">
+              </span>
+              <span class="ss-choice-label">Publicity</span>
+            </label>
+          </li> 
+          <li class="ss-choice-item">
+            <label>
+              <span class="ss-choice-item-control goog-inline-block">
+                <input type="radio" name="entry.1690506264" value="Operation Santa" id="group_1690506264_13" role="radio" class="ss-q-radio" aria-label="Operation Santa" required="" aria-required="true">
+              </span>
+              <span class="ss-choice-label">Operation Santa</span>
+            </label>
+          </li> 
+          <li class="ss-choice-item">
+            <label>
+              <span class="ss-choice-item-control goog-inline-block">
+                <input type="radio" name="entry.1690506264" value="WAPI" id="group_1690506264_14" role="radio" class="ss-q-radio" aria-label="WAPI" required="" aria-required="true">
+              </span>
+              <span class="ss-choice-label">WAPI</span>
+            </label>
+          </li> 
+          <li class="ss-choice-item">
+            <label>
+              <span class="ss-choice-item-control goog-inline-block">
+                <input type="radio" name="entry.1690506264" value="Family Head&nbsp;" id="group_1690506264_15" role="radio" class="ss-q-radio" aria-label="Family Head&nbsp;" required="" aria-required="true">
+              </span>
+              <span class="ss-choice-label">Family Head </span>
+            </label>
+          </li> 
+        </ul>
+
+        <div class="error-message" id="325981811_errorMessage"></div>
+      </div>
+    </div>
+  </div> 
+
+<div class="ss-form-question errorbox-good" role="listitem" style="width: 50%; float: left;">
+  <div dir="ltr" class="ss-item ss-item-required ss-checkbox">
+    <div class="ss-form-entry">
+      <label class="ss-q-item-label" for="entry_1627747887">
+        <div class="ss-q-title">GBM Attendances! 
+        <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+        <span class="ss-required-asterisk" aria-hidden="true">*</span>
+      </div>
+      <div class="ss-q-help ss-secondary-text" dir="ltr">Check the ones you attended for full credit. List half credit BELOW.</div>
+    </label>
+
+    <ul class="ss-choices ss-choices-required" role="group" aria-label="GBM Attendances!  Check the ones you attended for full credit. List half credit BELOW. "><li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.1873828247" value="GBM #1" id="group_1873828247_1" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+    <span class="ss-choice-label">GBM #1</span>
+    </label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.1873828247" value="GBM #2" id="group_1873828247_2" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+    <span class="ss-choice-label">GBM #2</span>
+    </label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.1873828247" value="GBM #3" id="group_1873828247_3" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+    <span class="ss-choice-label">GBM #3</span>
+    </label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.1873828247" value="GBM #4" id="group_1873828247_4" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+    <span class="ss-choice-label">GBM #4</span>
+    </label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.1873828247" value="GBM #5" id="group_1873828247_5" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+    <span class="ss-choice-label">GBM #5</span>
+    </label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.1873828247" value="GBM #6" id="group_1873828247_6" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+    <span class="ss-choice-label">GBM #6</span>
+    </label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.1873828247" value="GBM #7" id="group_1873828247_7" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+    <span class="ss-choice-label">GBM #7</span>
+    </label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.1873828247" value="GBM #8&nbsp;" id="group_1873828247_8" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+    <span class="ss-choice-label">GBM #8 </span>
+    </label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.1873828247" value="GBM #9" id="group_1873828247_9" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+    <span class="ss-choice-label">GBM #9</span>
+    </label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.1873828247" value="GBM #10" id="group_1873828247_10" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
+    <span class="ss-choice-label">GBM #10</span>
+    </label></li></ul>
+    <div class="error-message" id="1627747887_errorMessage"></div>
+    </div>
+  </div>
+</div> 
+
+
 <div class="ss-form-question errorbox-good" role="listitem">
-<div dir="ltr" class="ss-item ss-item-required ss-date"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_1997032944"><div class="ss-q-title">Family Event?
-<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
-<span class="ss-required-asterisk" aria-hidden="true">*</span></div>
-<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
-<input type="date" name="entry.1997032944" value="" class="ss-q-date" dir="auto" id="entry_1997032944" aria-label="Family Event?  " aria-required="true" required="">
-<div class="required-message">This is a required question</div></div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
-<div dir="ltr" class="ss-item ss-item-required ss-text"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_564506775"><div class="ss-q-title">Family Event?
-<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
-<span class="ss-required-asterisk" aria-hidden="true">*</span></div>
-<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
-<input type="text" name="entry.564506775" value="" class="ss-q-short" id="entry_564506775" dir="auto" aria-label="Family Event?  " aria-required="true" required="" title="">
-<div class="error-message" id="328135208_errorMessage"></div>
-<div class="required-message">This is a required question</div>
-</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
-<div dir="ltr" class="ss-item ss-item-required ss-radio"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_1578888613"><div class="ss-q-title">Attended Activation?
-<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
-<span class="ss-required-asterisk" aria-hidden="true">*</span></div>
-<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+  <div dir="ltr" class="ss-item ss-item-required ss-paragraph-text">
+    <div class="ss-form-entry">
+      <label class="ss-q-item-label" for="entry_744461990">
+        <div class="ss-q-title">GBM HALF Attendances! 
+          <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+          <span class="ss-required-asterisk" aria-hidden="true">*</span>
+        </div>
+        <div class="ss-q-help ss-secondary-text" dir="ltr">List the GBMS you received half credit for! &quot;N/A&quot; if not.</div>
+      </label>
+      <textarea name="entry.744461990" rows="8" cols="0" class="ss-q-long" id="entry_744461990" dir="auto" aria-label="GBM HALF Attendances!  List the GBMS you received half credit for! &quot;N/A&quot; if not. " aria-required="true" required=""></textarea>
+      <div class="error-message" id="1081731313_errorMessage"></div>
+    </div>
+  </div>
+</div>
+</br>
 
-<ul class="ss-choices" role="radiogroup" aria-label="Attended Activation?  "><li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1352429932" value="YES" id="group_1352429932_1" role="radio" class="ss-q-radio" aria-label="YES" required="" aria-required="true"></span>
-<span class="ss-choice-label">YES</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1352429932" value="NO" id="group_1352429932_2" role="radio" class="ss-q-radio" aria-label="NO" required="" aria-required="true"></span>
-<span class="ss-choice-label">NO</span>
-</label></li></ul>
-<div class="error-message" id="1578888613_errorMessage"></div>
-<div class="required-message">This is a required question</div></div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
-<div dir="ltr" class="ss-item ss-item-required ss-date"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_1245868786"><div class="ss-q-title">IC Event?
-<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
-<span class="ss-required-asterisk" aria-hidden="true">*</span></div>
-<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
-<input type="date" name="entry.1245868786" value="" class="ss-q-date" dir="auto" id="entry_1245868786" aria-label="IC Event?  " aria-required="true" required="">
-<div class="required-message">This is a required question</div></div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
-<div dir="ltr" class="ss-item ss-item-required ss-text"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_388159601"><div class="ss-q-title">IC Event?
-<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
-<span class="ss-required-asterisk" aria-hidden="true">*</span></div>
-<div class="ss-q-help ss-secondary-text" dir="ltr">If not, &quot;N/A&quot;</div></label>
-<input type="text" name="entry.388159601" value="" class="ss-q-short" id="entry_388159601" dir="auto" aria-label="IC Event? If not, &quot;N/A&quot; " aria-required="true" required="" title="">
-<div class="error-message" id="1638110765_errorMessage"></div>
-<div class="required-message">This is a required question</div>
-</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
-<div dir="ltr" class="ss-item ss-item-required ss-radio"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_325981811"><div class="ss-q-title">Committee?
-<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
-<span class="ss-required-asterisk" aria-hidden="true">*</span></div>
-<div class="ss-q-help ss-secondary-text" dir="ltr">(Dance Comp is under IC)</div></label>
+<div class="ss-form-question errorbox-good" role="listitem">
+  <div dir="ltr" class="ss-item ss-item-required ss-paragraph-text">
+    <div class="ss-form-entry">
+      <label class="ss-q-item-label" for="entry_86546629">
+        <div class="ss-q-title">Interview parties???
+          <label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+          <span class="ss-required-asterisk" aria-hidden="true">*</span>
+        </div>
+        <div class="ss-q-help ss-secondary-text" dir="ltr">List 3 if you picked up this quarter. List them under fellowships as well.</div>
+      </label>
+      <textarea name="entry.86546629" rows="8" cols="0" class="ss-q-long" id="entry_86546629" dir="auto" aria-label="Interview parties??? List 3 if you picked up this quarter. List them under fellowships as well. " aria-required="true" required=""></textarea>
+      <div class="error-message" id="417447844_errorMessage"></div>
+    </div>
+  </div>
+</div> 
 
-<ul class="ss-choices" role="radiogroup" aria-label="Committee? (Dance Comp is under IC) "><li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1690506264" value="PT" id="group_1690506264_1" role="radio" class="ss-q-radio" aria-label="PT" required="" aria-required="true"></span>
-<span class="ss-choice-label">PT</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1690506264" value="Membership" id="group_1690506264_2" role="radio" class="ss-q-radio" aria-label="Membership" required="" aria-required="true"></span>
-<span class="ss-choice-label">Membership</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1690506264" value="IC" id="group_1690506264_3" role="radio" class="ss-q-radio" aria-label="IC" required="" aria-required="true"></span>
-<span class="ss-choice-label">IC</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1690506264" value="S@A" id="group_1690506264_4" role="radio" class="ss-q-radio" aria-label="S@A" required="" aria-required="true"></span>
-<span class="ss-choice-label">S@A</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1690506264" value="WebMaster" id="group_1690506264_5" role="radio" class="ss-q-radio" aria-label="WebMaster" required="" aria-required="true"></span>
-<span class="ss-choice-label">WebMaster</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1690506264" value="Historian" id="group_1690506264_6" role="radio" class="ss-q-radio" aria-label="Historian" required="" aria-required="true"></span>
-<span class="ss-choice-label">Historian</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1690506264" value="Finance" id="group_1690506264_7" role="radio" class="ss-q-radio" aria-label="Finance" required="" aria-required="true"></span>
-<span class="ss-choice-label">Finance</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1690506264" value="Service" id="group_1690506264_8" role="radio" class="ss-q-radio" aria-label="Service" required="" aria-required="true"></span>
-<span class="ss-choice-label">Service</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1690506264" value="Fellowship" id="group_1690506264_9" role="radio" class="ss-q-radio" aria-label="Fellowship" required="" aria-required="true"></span>
-<span class="ss-choice-label">Fellowship</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1690506264" value="AlumniSec" id="group_1690506264_10" role="radio" class="ss-q-radio" aria-label="AlumniSec" required="" aria-required="true"></span>
-<span class="ss-choice-label">AlumniSec</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1690506264" value="AdminSec" id="group_1690506264_11" role="radio" class="ss-q-radio" aria-label="AdminSec" required="" aria-required="true"></span>
-<span class="ss-choice-label">AdminSec</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1690506264" value="Publicity" id="group_1690506264_12" role="radio" class="ss-q-radio" aria-label="Publicity" required="" aria-required="true"></span>
-<span class="ss-choice-label">Publicity</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1690506264" value="Operation Santa" id="group_1690506264_13" role="radio" class="ss-q-radio" aria-label="Operation Santa" required="" aria-required="true"></span>
-<span class="ss-choice-label">Operation Santa</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1690506264" value="Oxfam Hunger Banquet" id="group_1690506264_14" role="radio" class="ss-q-radio" aria-label="Oxfam Hunger Banquet" required="" aria-required="true"></span>
-<span class="ss-choice-label">Oxfam Hunger Banquet</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1690506264" value="Family Head&nbsp;" id="group_1690506264_15" role="radio" class="ss-q-radio" aria-label="Family Head&nbsp;" required="" aria-required="true"></span>
-<span class="ss-choice-label">Family Head </span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1690506264" value="" id="group_1690506264_16" role="radio" class="ss-q-radio" aria-label="" required="" aria-required="true"></span>
-<span class="ss-choice-label"></span>
-</label></li></ul>
-<div class="error-message" id="325981811_errorMessage"></div>
-<div class="required-message">This is a required question</div></div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
-<div dir="ltr" class="ss-item ss-item-required ss-radio"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_912212753"><div class="ss-q-title">Active Dues!
-<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
-<span class="ss-required-asterisk" aria-hidden="true">*</span></div>
-<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+<h2 class="ss-section-title" style="line-height: 5px;">Yearly Fraternity Requirements!</h2>
+  <div class="ss-section-description ss-no-ignore-whitespace">Almost to the end of the form! </div>
 
-<ul class="ss-choices" role="radiogroup" aria-label="Active Dues!  "><li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1941248308" value="PAID" id="group_1941248308_1" role="radio" class="ss-q-radio" aria-label="PAID" required="" aria-required="true"></span>
-<span class="ss-choice-label">PAID</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1941248308" value="Did not pay" id="group_1941248308_2" role="radio" class="ss-q-radio" aria-label="Did not pay" required="" aria-required="true"></span>
-<span class="ss-choice-label">Did not pay</span>
-</label></li></ul>
-<div class="error-message" id="912212753_errorMessage"></div>
-<div class="required-message">This is a required question</div></div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
-<div dir="ltr" class="ss-item ss-item-required ss-paragraph-text"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_86546629"><div class="ss-q-title">Interview parties???
-<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
-<span class="ss-required-asterisk" aria-hidden="true">*</span></div>
-<div class="ss-q-help ss-secondary-text" dir="ltr">List 3 if you picked up this quarter. List them under fellowships as well.</div></label>
-<textarea name="entry.86546629" rows="8" cols="0" class="ss-q-long" id="entry_86546629" dir="auto" aria-label="Interview parties??? List 3 if you picked up this quarter. List them under fellowships as well. " aria-required="true" required=""></textarea>
-<div class="error-message" id="417447844_errorMessage"></div>
-<div class="required-message">This is a required question</div>
-</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
-<div dir="ltr" class="ss-item ss-item-required ss-checkbox"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_1627747887"><div class="ss-q-title">GBM Attendances! 
-<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
-<span class="ss-required-asterisk" aria-hidden="true">*</span></div>
-<div class="ss-q-help ss-secondary-text" dir="ltr">Check the ones you attended for full credit. List half credit BELOW.</div></label>
-
-<ul class="ss-choices ss-choices-required" role="group" aria-label="GBM Attendances!  Check the ones you attended for full credit. List half credit BELOW. "><li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.1873828247" value="GBM #1" id="group_1873828247_1" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
-<span class="ss-choice-label">GBM #1</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.1873828247" value="GBM #2" id="group_1873828247_2" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
-<span class="ss-choice-label">GBM #2</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.1873828247" value="GBM #3" id="group_1873828247_3" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
-<span class="ss-choice-label">GBM #3</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.1873828247" value="GBM #4" id="group_1873828247_4" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
-<span class="ss-choice-label">GBM #4</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.1873828247" value="GBM #5" id="group_1873828247_5" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
-<span class="ss-choice-label">GBM #5</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.1873828247" value="GBM #6" id="group_1873828247_6" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
-<span class="ss-choice-label">GBM #6</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.1873828247" value="GBM #7" id="group_1873828247_7" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
-<span class="ss-choice-label">GBM #7</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.1873828247" value="GBM #8&nbsp;" id="group_1873828247_8" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
-<span class="ss-choice-label">GBM #8 </span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.1873828247" value="GBM #9" id="group_1873828247_9" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
-<span class="ss-choice-label">GBM #9</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.1873828247" value="GBM #10" id="group_1873828247_10" role="checkbox" class="ss-q-checkbox" aria-required="true"></span>
-<span class="ss-choice-label">GBM #10</span>
-</label></li></ul>
-<div class="error-message" id="1627747887_errorMessage"></div>
-<div class="required-message">This is a required question</div></div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
-<div dir="ltr" class="ss-item ss-item-required ss-paragraph-text"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_744461990"><div class="ss-q-title">GBM HALF Attendances! 
-<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
-<span class="ss-required-asterisk" aria-hidden="true">*</span></div>
-<div class="ss-q-help ss-secondary-text" dir="ltr">List the GBMS you received half credit for! &quot;N/A&quot; if not.</div></label>
-<textarea name="entry.744461990" rows="8" cols="0" class="ss-q-long" id="entry_744461990" dir="auto" aria-label="GBM HALF Attendances!  List the GBMS you received half credit for! &quot;N/A&quot; if not. " aria-required="true" required=""></textarea>
-<div class="error-message" id="1081731313_errorMessage"></div>
-<div class="required-message">This is a required question</div>
-</div></div></div> <div class="errorbox-good" role="listitem">
-<div dir="ltr" class="ss-item  ss-section-header"><div class="ss-form-entry">
-<h2 class="ss-section-title">Yearly Fraternity Requirements!</h2>
-<div class="ss-section-description ss-no-ignore-whitespace">Almost to the end of the form! </div>
-</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+<div class="ss-form-question errorbox-good" role="listitem">
 <div dir="ltr" class="ss-item  ss-radio"><div class="ss-form-entry">
 <label class="ss-q-item-label" for="entry_310433347"><div class="ss-q-title">Did you go to Elections?
 </div>
