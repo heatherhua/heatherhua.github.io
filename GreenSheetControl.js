@@ -1,29 +1,31 @@
     var serviceRows = 0;
     var fellowshipRows = 0;
+    var fundraisingRows = 0;
     var rushRows = 0;
     var famEventRows = 0;
     var icEventRows = 0;
+    var chairRows = 0;
 
     var serviceHash = {
     	2 : {
     		"name" : "entry.479432008",
     		"id" : "entry_479432008" ,
-        "title" : "Service Dates"
+    		"title" : "Service Dates"
     	},
    		3 : {
     		"name" : "entry.277624700",
     		"id" : "entry_277624700" ,
-        "title" : "Service Events"
+    		"title" : "Service Events"
     	},
     	4 : {
     		"name" : "entry.259088472",
     		"id" : "entry_259088472" ,
-        "title" : "Service Hours"
+    		"title" : "Service Hours"
     	},
     	5 : {
     		"name" : "entry.1538896044",
     		"id" : "entry_1538896044",
-        "title" : "Service Chairs" 
+    		"title" : "Service Chairs" 
     	}    	
     };
 
@@ -50,6 +52,29 @@
       }  
     }
 
+    var fundraisingHash = {
+      2 : {
+        "name" : "entry.996818722",
+        "id" : "entry_996818722" ,
+        "title" : "Fundraising Dates"
+      },
+      3 : {
+        "name" : "entry.1411973316",
+        "id" : "entry_1411973316" ,
+        "title" : "Fundraising Events"
+      },
+      4 : {
+        "name" : "entry.1806781626",
+        "id" : "entry_1806781626" ,
+        "title" : "Fundraising Credits"
+      },
+      5 : {
+        "name" : "entry.1533769780",
+        "id" : "entry_1533769780",
+        "title" : "Fundraising Chairs" 
+      }  
+    }
+    
     var rushHash = {
       2 : {
         "name" : "entry.953406965",
@@ -121,6 +146,10 @@
           hash = fellowshipHash;
           row = table.insertRow(++fellowshipRows);
           break;
+        case "fundraising_table":
+        	hash = fundraisingHash;
+        	row = table.insertRow(++fundraisingRows);
+        	break;
         default:
           hash = serviceHash;     
       }
@@ -139,6 +168,9 @@
         case "fellowship_table":
           cell1.innerHTML = fellowshipRows;
           break;
+        case "fundraising_table":
+        	cell1.innerHTML = fundraisingRows;
+        	break;
         default:
           cell1.innerHTML = 0;
       }
@@ -246,33 +278,81 @@
       }
 
     };
+    
+    function addChairedEventRow() {
+      var table = document.getElementById("chair_table");
+      
+      var row = table.insertRow(++chairRows);
 
+      // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+      var cell1 = row.insertCell(0);
+      var cell2 = row.insertCell(1);
+      var cell3 = row.insertCell(2);
+      
+      cell1.innerHTML = chairRows;
+
+      // Date
+      var when = document.createElement("input");
+        when.setAttribute("type", "date");
+        // Replace name and entry with array of ids
+        when.setAttribute("name", "entry.1770132735");
+        when.setAttribute("id", "entry_1770132735");
+        when.setAttribute("aria-label", "Chair Event Dates");
+        when.setAttribute("aria-required", "true");
+        when.setAttribute("class", "ss-q-date");
+        when.setAttribute("dir", "auto");
+
+      cell2.appendChild(when);
+
+        var data = document.createElement("input");
+        data.setAttribute("type", "text");
+        data.setAttribute("name", "entry.681174354");
+        data.setAttribute("id", "entry_681174354");
+        data.setAttribute("aria-label", "Chaired Events");
+        data.setAttribute("aria-required", "true");
+        data.setAttribute("class", "ss-q-short");
+        data.setAttribute("dir", "auto");
+        cell3.appendChild(data);
+    }
+
+    function loadChairTable() {
+    	for(i = 0; i < 4; i++) {
+    		addChairedEventRow();
+    	}
+    }
+    
     function loadServiceTable() {
-      for (i = 0; i < 5; i++) {
+      for (i = 0; i < 7; i++) {
         addRow("service_table");
       }
     }
 
     function loadFellowshipTable() {
-      for (i = 0; i < 4; i++) {
+      for (i = 0; i < 7; i++) {
         addRow("fellowship_table");
       }
     }
+    
+    function loadFundraisingTable() {
+    	for(i = 0; i < 4; i++) {
+    		addFundraisingRow();
+    	}
+    }
 
     function loadRushTable() {
-      for (i = 0; i < 2; i++) {
+      for (i = 0; i < 4; i++) {
         addRushRow();
       }
     }
 
     function loadFamilyEventTable() {
-      for(i = 0; i < 2; i++) {
+      for(i = 0; i < 4; i++) {
         addFamEventRow();
       }
     }
 
     function loadIcEventTable() {
-      for( i = 0; i < 2; i++) {
+      for( i = 0; i < 5; i++) {
         addIcEventRow();
       }
     }
@@ -283,6 +363,10 @@
 
     function addServiceRow() {
         addRow("service_table");
+    }
+    
+    function addFundraisingRow() {
+    	addRow("fundraising_table");
     }
 
     function addRushRow() {
@@ -303,4 +387,6 @@
       loadRushTable();
       loadFamilyEventTable();
       loadIcEventTable();
+      loadChairTable();
+      loadFundraisingTable();
     }
