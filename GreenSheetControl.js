@@ -359,10 +359,23 @@
       }
     }
     
-    function loadMakeUpTable() {
-    	for(i = 0; i < 4; i++){
-    		addRowSmall("makeup_table");
+    function loadMakeUpTable(type) {
+    	
+    	for(i = makeUpRows; i > 0; i--){
+    		document.getElementById("makeup_table").deleteRow(i);
     	}
+    	 
+    	makeUpRows = 0;
+    	if(type == '2ICs'){
+    		for(i = 0; i < 2; i++){
+    			addRowSmall("makeup_table");
+    		}
+    	} else {
+    		for(i = 0; i < 3; i++){
+    			addRowSmall("makeup_table");
+    		}
+    	}
+    	
     }
     
     function loadFundraisingTable() {
@@ -429,6 +442,12 @@
             document.getElementById('ifYesHeading').style.display = 'none';
             document.getElementById('makeup_table').style.display = 'none';
         }
+    }
+    
+    function makeupCheck() {
+    	var makeup = document.getElementById("entry_488659576");
+    	var selectedMakeup = makeup.options[makeup.selectedIndex].value;
+    	loadMakeUpTable(selectedMakeup);
     }
 
     

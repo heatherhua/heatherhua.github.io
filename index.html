@@ -107,10 +107,10 @@
 											MakeUps<span class="ss-required-asterisk">*</span>
 										</div>
 									</label> <select name="entry.488659576" id="entry_488659576"
-										aria-label="MakeUps">
-										<option value="5 Service Hrs + Chaired 3 events w/ 10+ people">
+										aria-label="MakeUps" onchange="javascript:makeupCheck();">
+										<option value="3Chaired">
 											5 Service Hrs + Chaired 3 events w/ 10+ people</option>
-										<option value="5 Service Hrs + 2 IC events (in & out)">
+										<option value="2ICs">
 											5 Service Hrs + 2 IC events (in & out)</option>
 									</select>
 								</div>
@@ -124,7 +124,7 @@
 					Events</h2>
 
 				<!-- MAKE UP TABLE -->
-				<table id="makeup_table" style="width: 100%; display:none;">
+				<table id="makeup_table" style="display:none; margin-bottom: 2%;">
 					<tr>
 						<th></th>
 						<th>
@@ -199,6 +199,7 @@
 				</div>
 				<!-- End of favorite Service block -->
 
+				
 				<!-- FELLOWSHIPS -->
 				<h2 class="ss-section-title">Fellowship Lovin&#39; !</h2>
 				<!-- FELLOWSHIP TABLE -->
