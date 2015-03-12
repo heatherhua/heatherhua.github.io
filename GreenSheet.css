@@ -9,16 +9,23 @@
   font-family: "Roboto";
   color: rgb(196,59,29);
   font-weight: 400;
-  font-size: 1.000rem;
+  font-size: 15px;
   font-style: normal;
 }
 
+input, textarea {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 15px;
+  font-style: normal;
+  font-color: #00003D;
+}
 body {
   background-color: #00003D;
   font-family: "Roboto";
   color: rgb(119,119,119);
   font-weight: 400;
-  font-size: 1.080rem;
+  font-size: 15px;
   font-style: normal;
 }
 .top-of-page {
