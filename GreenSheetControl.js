@@ -347,18 +347,12 @@
     	}
     }
     
-    function loadServiceTable() {
-      for (i = 0; i < 7; i++) {
-        addRow("service_table");
+    function loadLargeTables() {
+    	for (i = 0; i < 7; i++) {
+    		addRow("fellowship_table");
+    		addRow("service_table");
       }
     }
-
-    function loadFellowshipTable() {
-      for (i = 0; i < 7; i++) {
-        addRow("fellowship_table");
-      }
-    }
-    
     function loadMakeUpTable(type) {
     	
     	for(i = makeUpRows; i > 0; i--){
@@ -378,28 +372,13 @@
     	
     }
     
-    function loadFundraisingTable() {
-    	for(i = 0; i < 4; i++) {
+    function loadSmallTables() {
+    	for(i=0; i< 3; i++){
     		addFundraisingRow();
+    		addRushRow();
+    		addFamEventRow();
+    		addIcEventRow();
     	}
-    }
-
-    function loadRushTable() {
-      for (i = 0; i < 4; i++) {
-        addRushRow();
-      }
-    }
-
-    function loadFamilyEventTable() {
-      for(i = 0; i < 4; i++) {
-        addFamEventRow();
-      }
-    }
-
-    function loadIcEventTable() {
-      for( i = 0; i < 5; i++) {
-        addIcEventRow();
-      }
     }
 
     function addFellowshipRow() {
@@ -432,8 +411,8 @@
         if (selectedStanding == "MakeUps") {
 
             document.getElementById('ifYes').style.display = 'block';
-            document.getElementById('ifYesHeading').style.display = 'block';
-            document.getElementById('makeup_table').style.display = 'block';
+            document.getElementById('ifYesHeading').style.display = 'table';
+            document.getElementById('makeup_table').style.display = 'table';
 
             loadMakeUpTable();
         }
@@ -452,11 +431,7 @@
 
     
     window.onload = function() {
-      loadServiceTable();
-      loadFellowshipTable();
-      loadRushTable();
-      loadFamilyEventTable();
-      loadIcEventTable();
-      loadChairTable();
-      loadFundraisingTable();
+      loadLargeTables();
+       loadChairTable();
+       loadSmallTables();
     }
