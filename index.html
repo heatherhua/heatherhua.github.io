@@ -33,41 +33,119 @@
 			<form
 				action="https://docs.google.com/forms/d/15GxIt-S3pLR-MJC-asOW0PpbZ-Av7DSsZmev3qByyM0/formResponse"
 				method="POST" id="ss-form" target="_self" onsubmit="">
-				<!-- NAME -->
-				<div class="ss-form-question errorbox-good"
-					style="float: left; margin: 0; width: 30%;">
-					<div dir="ltr" class="ss-item ss-item-required ss-text">
-						<div class="ss-form-entry">
-							<label class="ss-q-item-label" for="entry_2090958648">
-								<div class="ss-q-title">
-									Name <span class="ss-required-asterisk">*</span>
+
+				<div class="container-fluid">
+					<!-- Small question row -->
+					<div class="row">
+						<!-- Activation col -->
+						<!-- NAME -->
+						<div class="ss-form-question errorbox-good"
+							style="float: left; margin: 0; width: 15%;">
+							<div dir="ltr" class="ss-item ss-item-required ss-text">
+								<div class="ss-form-entry">
+									<label class="ss-q-item-label" for="entry_2090958648">
+										<div class="ss-q-title">
+											Name <span class="ss-required-asterisk">*</span>
+										</div>
+									</label> <input type="text" name="entry.2090958648" value=""
+										class="ss-q-short" id="entry_2090958648" dir="auto">
+									<div class="error-message" id="2014726045_errorMessage"></div>
 								</div>
-							</label> <input type="text" name="entry.2090958648" value=""
-								class="ss-q-short" id="entry_2090958648" dir="auto">
-							<div class="error-message" id="2014726045_errorMessage"></div>
+							</div>
+						</div>
+
+						<!-- FAMILY -->
+						<div class="ss-form-question errorbox-good"
+							style="float: left; margin-left: 2%">
+							<div dir="ltr" class="ss-item ss-item-required ss-select">
+								<div class="ss-form-entry">
+									<label class="ss-q-item-label" for="entry_1625655456">
+										<div class="ss-q-title">
+											Family <span class="ss-required-asterisk">*</span>
+										</div>
+									</label> <select name="entry.1625655456" id="entry_1625655456"
+										aria-label="Family">
+										<option value="Alpha">Alpha</option>
+										<option value="Phi">Phi</option>
+										<option value="Omega">Omega</option>
+										<option value="Rho">Rho</option>
+										<option value="Pi">Pi</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<!-- STANDING -->
+						<div class="ss-form-question errorbox-good"
+							style="float: left; margin-left: 3%">
+							<div dir="ltr" class="ss-item ss-item-required ss-select">
+								<div class="ss-form-entry">
+									<label class="ss-q-item-label" for="entry_1693608535">
+										<div class="ss-q-title">
+											Standing <span class="ss-required-asterisk">*</span>
+										</div>
+									</label> <select name="entry.1693608535" id="entry_1693608535"
+										aria-label="Standing" onchange="javascript:yesnoCheck();">
+										<option value="Active" name="yesno" id="noCheck">Active</option>
+										<option value="Active/Picked Up" name="yesno" id="noCheck">Active/Picked
+											Up</option>
+										<option value="SuperFly" name="yesno" id="noCheck">SuperFly
+											Rho Pi!</option>
+										<option value="MakeUps" name="yesno" id="yesCheck">Make
+											Ups/Picked Up</option>
+									</select>
+								</div>
+							</div>
+						</div>
+
+						<!-- MAKEUPS -->
+						<div class="ss-form-question errorbox-good" id="ifYes"
+							style="display: none; float: left; margin-left: 2%">
+							<div dir="ltr" class="ss-item ss-item-required ss-select">
+								<div class="ss-form-entry">
+									<label class="ss-q-item-label" for="entry_488659576">
+										<div class="ss-q-title">
+											MakeUps<span class="ss-required-asterisk">*</span>
+										</div>
+									</label> <select name="entry.488659576" id="entry_488659576"
+										aria-label="MakeUps">
+										<option value="5 Service Hrs + Chaired 3 events w/ 10+ people">
+											5 Service Hrs + Chaired 3 events w/ 10+ people</option>
+										<option value="5 Service Hrs + 2 IC events (in & out)">
+											5 Service Hrs + 2 IC events (in & out)</option>
+									</select>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 
-				<!-- FAMILY -->
-				<div class="ss-form-question errorbox-good">
-					<div dir="ltr" class="ss-item ss-item-required ss-select">
-						<div class="ss-form-entry">
-							<label class="ss-q-item-label" for="entry_1625655456">
-								<div class="ss-q-title">
-									Family <span class="ss-required-asterisk">*</span>
-								</div>
-							</label> <select name="entry.1625655456" id="entry_1625655456"
-								aria-label="Family">
-								<option value="Alpha">Alpha</option>
-								<option value="Phi">Phi</option>
-								<option value="Omega">Omega</option>
-								<option value="Rho">Rho</option>
-								<option value="Pi">Pi</option>
-							</select>
-						</div>
-					</div>
-				</div>
+				<h2 class="ss-section-title" id="ifYesHeading"
+					style="width: 100%; margin-bottom: 2%; display: none;">Make Up
+					Events</h2>
+
+				<!-- MAKE UP TABLE -->
+				<table id="makeup_table" style="width: 100%; display:none;">
+					<tr>
+						<th></th>
+						<th>
+							<div class="ss-q-title">
+								Date <span class="ss-required-asterisk">*</span>
+							</div>
+						</th>
+						<th>
+							<div class="ss-q-title">
+								Event <span class="ss-required-asterisk">*</span>
+							</div>
+							<div class="ss-q-help ss-secondary-text" dir="ltr"></div>
+						</th>
+						<th>
+							<div class="ss-q-title">
+								Chair <span class="ss-required-asterisk">*</span>
+							</div>
+						</th>
+					</tr>
+					<!-- rows get auto populated -->
+				</table>
 
 				<h2 class="ss-section-title">Service</h2>
 
@@ -594,8 +672,7 @@
 				</div>
 				<!-- end of container -->
 
-				<br>
-				<br>
+				<br> <br>
 				<h2 class="ss-section-title" style="line-height: 5px;">Yearly
 					Fraternity Requirements!</h2>
 				<div class="ss-section-description ss-no-ignore-whitespace">Almost
@@ -714,7 +791,7 @@
 							<div class="ss-form-entry">
 								<label class="ss-q-item-label" for="entry_464703081">
 									<div class="ss-q-title">
-										RECYCLED? 
+										RECYCLED?
 										<!-- <span class="ss-required-asterisk">*</span> -->
 									</div>
 									<div class="ss-q-help ss-secondary-text" dir="ltr">Select
@@ -772,13 +849,13 @@
 							<th></th>
 							<th>
 								<div class="ss-q-title">
-									Date 
-								    <!--  <span class="ss-required-asterisk">*</span> -->
+									Date
+									<!--  <span class="ss-required-asterisk">*</span> -->
 								</div>
 							</th>
 							<th>
 								<div class="ss-q-title">
-									I Chaired Events 
+									I Chaired Events
 									<!--  <span class="ss-required-asterisk">*</span> -->
 								</div>
 							</th>
@@ -791,30 +868,34 @@
 			<!--  end of row -->
 		</div>
 		<!--  end of container -->
-        <br><br>
+		<br> <br>
 		<!-- FUNDRAISING TABLE -->
 		<table id="fundraising_table" style="width: 100%">
 			<tr>
 				<th></th>
 				<th>
 					<div class="ss-q-title">
-						Date <!-- <span class="ss-required-asterisk">*</span> -->
+						Date
+						<!-- <span class="ss-required-asterisk">*</span> -->
 					</div>
 				</th>
 				<th>
 					<div class="ss-q-title">
-						Fundraising Event <!--  <span class="ss-required-asterisk">*</span> -->
+						Fundraising Event
+						<!--  <span class="ss-required-asterisk">*</span> -->
 					</div>
 					<div class="ss-q-help ss-secondary-text" dir="ltr"></div>
 				</th>
 				<th>
 					<div class="ss-q-title">
-						Credits <!-- <span class="ss-required-asterisk">*</span> -->
+						Credits
+						<!-- <span class="ss-required-asterisk">*</span> -->
 					</div>
 				</th>
 				<th>
 					<div class="ss-q-title">
-						Chair <!-- <span class="ss-required-asterisk">*</span> -->
+						Chair
+						<!-- <span class="ss-required-asterisk">*</span> -->
 					</div>
 				</th>
 			</tr>

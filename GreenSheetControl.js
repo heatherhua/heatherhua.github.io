@@ -5,6 +5,7 @@
     var famEventRows = 0;
     var icEventRows = 0;
     var chairRows = 0;
+    var makeUpRows = 0;
 
     var serviceHash = {
     	2 : {
@@ -51,7 +52,25 @@
         "title" : "Fellowship Chairs" 
       }  
     }
-
+    
+    var makeUpHash = {
+      2 : {
+        "name" : "entry.1361134239",
+        "id" : "entry_1361134239" ,
+        "title" : "Dates"
+      },
+      3 : {
+        "name" : "entry.2018420655",
+        "id" : "entry_2018420655" ,
+        "title" : "Make Up Events"
+      },
+      4 : {
+        "name" : "entry.2021743540",
+        "id" : "entry_2021743540" ,
+        "title" : "Chairs"
+      }
+    }
+    
     var fundraisingHash = {
       2 : {
         "name" : "entry.996818722",
@@ -205,7 +224,7 @@
     };
 
 
-    // For rush, family events, ic events ()
+    // For rush, family events, ic events, makeup events
     function addRowSmall(tableName) {
       var table = document.getElementById(tableName);
       
@@ -224,6 +243,10 @@
           hash = icEventHash;
           row = table.insertRow(++icEventRows);
           break;
+        case "makeup_table":
+        	hash = makeUpHash;
+        	row = table.insertRow(++makeUpRows);
+        	break;
         default:
         //shouldn't happen
           hash = icEventHash;     
@@ -244,6 +267,9 @@
           break;
         case "ic_table" :
           cell1.innerHTML = icEventRows;
+          break;
+        case "makeup_table" :
+          cell1.innerHTML = makeUpRows;
           break;
         default:
           cell1.innerHTML = 0;
@@ -333,6 +359,12 @@
       }
     }
     
+    function loadMakeUpTable() {
+    	for(i = 0; i < 4; i++){
+    		addRowSmall("makeup_table");
+    	}
+    }
+    
     function loadFundraisingTable() {
     	for(i = 0; i < 4; i++) {
     		addFundraisingRow();
@@ -380,7 +412,26 @@
     function addIcEventRow() {
       addRowSmall("ic_table");
     }
+    
+    function yesnoCheck() {
+    	var standing = document.getElementById("entry_1693608535");
+    	var selectedStanding = standing.options[standing.selectedIndex].value;
+        if (selectedStanding == "MakeUps") {
 
+            document.getElementById('ifYes').style.display = 'block';
+            document.getElementById('ifYesHeading').style.display = 'block';
+            document.getElementById('makeup_table').style.display = 'block';
+
+            loadMakeUpTable();
+        }
+        else {
+        	document.getElementById('ifYes').style.display = 'none';
+            document.getElementById('ifYesHeading').style.display = 'none';
+            document.getElementById('makeup_table').style.display = 'none';
+        }
+    }
+
+    
     window.onload = function() {
       loadServiceTable();
       loadFellowshipTable();
