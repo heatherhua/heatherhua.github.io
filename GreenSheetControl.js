@@ -342,13 +342,13 @@
     }
 
     function loadChairTable() {
-    	for(i = 0; i < 4; i++) {
+    	for(i = 0; i < 2; i++) {
     		addChairedEventRow();
     	}
     }
     
     function loadLargeTables() {
-    	for (i = 0; i < 7; i++) {
+    	for (i = 0; i < 4; i++) {
     		addRow("fellowship_table");
     		addRow("service_table");
       }
@@ -373,7 +373,7 @@
     }
     
     function loadSmallTables() {
-    	for(i=0; i< 3; i++){
+    	for(i=0; i< 2; i++){
     		addFundraisingRow();
     		addRushRow();
     		addFamEventRow();
@@ -415,11 +415,20 @@
             document.getElementById('makeup_table').style.display = 'table';
 
             loadMakeUpTable();
-        }
+        } 
         else {
         	document.getElementById('ifYes').style.display = 'none';
             document.getElementById('ifYesHeading').style.display = 'none';
             document.getElementById('makeup_table').style.display = 'none';
+            if (selectedStanding == "Active/Picked Up"){
+            	document.getElementById('ifBigHeading').style.display = 'block';
+            	document.getElementById('flyering_table').style.display = 'table';
+            	document.getElementById('chalkboarding_table').style.display = 'table';
+            }else {
+            	document.getElementById('ifBigHeading').style.display = 'none';
+            	document.getElementById('flyering_table').style.display = 'none';
+            	document.getElementById('chalkboarding_table').style.display = 'none';
+            }
         }
     }
     
