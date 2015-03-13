@@ -227,9 +227,32 @@
 				</div>
 				<!-- end of favorite fellowship -->
 
-				<!-- PICKING UP -->
-				<h2 class="ss-section-title">I picked up!</h2>
-				<table id="flyering_table" style="width: 80%">
+				<!-- QUARTERLY -->
+				<h2 class="ss-section-title">Quarterly Fraternity Events!</h2>
+				<table id="chalkboarding_table" style="width: 80%">
+					<tr>
+						<th></th>
+						<th>
+							<div class="ss-q-title">
+								Date <span class="ss-required-asterisk">*</span>
+							</div>
+						</th>
+						<th>
+							<div class="ss-q-title">
+								Chalkboarding Events <span class="ss-required-asterisk">*</span>
+							</div>
+						</th>
+						<th>
+							<div class="ss-q-title">
+								Chairs <span class="ss-required-asterisk">*</span>
+							</div>
+						</th>
+					</tr>
+				</table>
+				<a class="myButton" onclick="addChalkboardingRow()"
+					style="float: right;">I did more!</a>
+				<br><br>
+			    <table id="flyering_table" style="width: 80%">
 					<tr>
 						<th></th>
 						<th>
@@ -249,12 +272,9 @@
 						</th>
 					</tr>
 				</table>
-
-				<a class="myButton" onclick="addRushRow()"
-					style="float: right;">I did more!</a> <br> <br>
-					
-				<!-- QUARTERLY -->
-				<h2 class="ss-section-title">Quarterly Fraternity Events!</h2>
+				<a class="myButton" onclick="addFlyeringRow()"
+					style="float: right;">I did more!</a>
+                 <br> <br>
 				<table id="rush_table" style="width: 80%">
 					<tr>
 						<th></th>
@@ -743,13 +763,11 @@
 							<th>
 								<div class="ss-q-title">
 									Date
-									<!--  <span class="ss-required-asterisk">*</span> -->
 								</div>
 							</th>
 							<th>
 								<div class="ss-q-title">
 									I Chaired Events
-									<!--  <span class="ss-required-asterisk">*</span> -->
 								</div>
 							</th>
 						</tr>
@@ -769,26 +787,22 @@
 				<th>
 					<div class="ss-q-title">
 						Date
-						<!-- <span class="ss-required-asterisk">*</span> -->
 					</div>
 				</th>
 				<th>
 					<div class="ss-q-title">
 						Fundraising Event
-						<!--  <span class="ss-required-asterisk">*</span> -->
 					</div>
 					<div class="ss-q-help ss-secondary-text" dir="ltr"></div>
 				</th>
 				<th>
 					<div class="ss-q-title">
 						Credits
-						<!-- <span class="ss-required-asterisk">*</span> -->
 					</div>
 				</th>
 				<th>
 					<div class="ss-q-title">
 						Chair
-						<!-- <span class="ss-required-asterisk">*</span> -->
 					</div>
 				</th>
 			</tr>
