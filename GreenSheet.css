@@ -19,6 +19,7 @@ input, textarea {
   font-size: 15px;
   font-style: normal;
   font-color: #00003D;
+  text-align: center;
 }
 body {
   background-color: #00003D;
